@@ -19,11 +19,14 @@ function CreatePost() {
     if (form.prompt) {
       try {
         setgeneratingImg(true);
-        const response = await fetch("http://localhost:8080/api/v1/dalle", {
-          method: "post",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ prompt: form.prompt }),
-        });
+        const response = await fetch(
+          "https://dall-e-anst.onrender.com/api/v1/dalle",
+          {
+            method: "post",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ prompt: form.prompt }),
+          }
+        );
 
         const data = await response.json();
 
@@ -45,13 +48,16 @@ function CreatePost() {
       setLoading(true);
 
       try {
-        const reponse = await fetch("http://localhost:8080/api/v1/post", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ ...form }),
-        });
+        const reponse = await fetch(
+          "https://dall-e-anst.onrender.com/api/v1/post",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ ...form }),
+          }
+        );
 
         await reponse.json();
         navigate("/");
