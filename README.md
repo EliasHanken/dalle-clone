@@ -1,6 +1,8 @@
-# Dall-E Clone
+# Dall-E Clone [![pages-build-deployment](https://github.com/Streafe/dalle-clone/actions/workflows/pages/pages-build-deployment/badge.svg?branch=gh-pages)](https://github.com/Streafe/dalle-clone/actions/workflows/pages/pages-build-deployment)
 
 A clone of OpenAI's Dall-E, the state-of-the-art deep learning model for generating original images from textual descriptions.
+
+Hosted with GitHub Pages at https://streafe.github.io/dalle-clone/
 
 ## Prerequisites
 
