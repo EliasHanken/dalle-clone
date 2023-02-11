@@ -60,7 +60,7 @@ function CreatePost() {
         );
 
         await reponse.json();
-        navigate("/");
+        navigate("/dalle-clone/");
       } catch (error) {
         alert(error);
         setLoading(false);
@@ -90,7 +90,7 @@ function CreatePost() {
       </div>
 
       <form className="mt-16 max-w-3xl" onSubmit={handleSubmit}>
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-5 ">
           <FormField
             labelName="Your name"
             type="text"
@@ -109,35 +109,37 @@ function CreatePost() {
             isSurpriseMe
             handleSurpriseMe={handleSurpriseMe}
           />
-          <div
-            className="relative bg-gray-50 border 
+          <div className="flex justify-center items-center sm:block">
+            <div
+              className="relative bg-gray-100 border 
           border-gray-300 text-gray-900 text-sm rounded-lg 
-          focus:ring-blue-500 focus:border-blue-500 w-64 p-3
-          h-64 flex justify-center items-center"
-          >
-            {form.photo ? (
-              <img
-                src={form.photo}
-                alt={form.prompt}
-                className="w-full h-full object-contain"
-              />
-            ) : (
-              <img
-                src={preview}
-                alt="preview"
-                className="w-9/12 h-9/12 object-contain opacity-40"
-              />
-            )}
+          focus:ring-blue-500 focus:border-blue-500 p-3
+          flex justify-center items-center w-80 h-80 md:w-96 md:h-96"
+            >
+              {form.photo ? (
+                <img
+                  src={form.photo}
+                  alt={form.prompt}
+                  className="w-full h-full object-contain"
+                />
+              ) : (
+                <img
+                  src={preview}
+                  alt="preview"
+                  className="w-9/12 h-9/12 object-contain opacity-40"
+                />
+              )}
 
-            {generatingImg && (
-              <div
-                className="absolute inset-0 z-0 flex
+              {generatingImg && (
+                <div
+                  className="absolute inset-0 z-0 flex
               justify-center items-center bg-[rgba(0,0,0,0.5)]
               rounded-lg"
-              >
-                <Loader />
-              </div>
-            )}
+                >
+                  <Loader />
+                </div>
+              )}
+            </div>
           </div>
         </div>
         <div className="mt-5 flex gap-5">
