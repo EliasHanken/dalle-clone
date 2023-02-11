@@ -60,7 +60,7 @@ function CreatePost() {
         );
 
         await reponse.json();
-        navigate("/dalle-clone/");
+        navigate("/");
       } catch (error) {
         alert(error);
         setLoading(false);
