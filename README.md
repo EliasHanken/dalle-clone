@@ -2,7 +2,7 @@
 
 A clone of OpenAI's Dall-E, the state-of-the-art deep learning model for generating original images from textual descriptions.
 
-Hosted with [GitHub Pages](https://streafe.github.io/dalle-clone/)
+Hosted with GitHub Pages at https://streafe.github.io/dalle-clone/
 
 ## Prerequisites
 
